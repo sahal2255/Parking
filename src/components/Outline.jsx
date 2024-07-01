@@ -9,10 +9,10 @@ export default function Outline() {
   const [selectedDate, setSelectedDate] = useState('');
   const [selectedSeats, setSelectedSeats] = useState([]);
   const [showModal, setShowModal] = useState(false); // State for showing the confirmation modal
-  const [userDetails, setUserDetails] = useState(null); // State for user details
+  // const [userDetails, setUserDetails] = useState(null); // State for user details
   const bookedSeats = useSelector(state =>
     state.parks
-      .filter(park => park.selectedDate === selectedDate)
+    .filter(park => park.selectedDate === selectedDate)
       .map(park => ({
         bookedSeats: park.bookedSeats,
         userDetails: {
@@ -32,7 +32,6 @@ export default function Outline() {
   };
 
   const handleSeatSelection = (seatNumber) => {
-    // Toggle seat selection
     if (selectedSeats.includes(seatNumber)) {
       setSelectedSeats(prevSelectedSeats => prevSelectedSeats.filter(seat => seat !== seatNumber));
     } else {
