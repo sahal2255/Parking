@@ -4,12 +4,12 @@ import { useSelector } from 'react-redux';
 import Continue from "../components/Countinue";
 
 export default function Outline() {
-  const TotalSeat = 30; // Set the total number of seats here
+  const TotalSeat = 30; 
   const seatsArray = Array.from({ length: TotalSeat }, (_, index) => index + 1);
   const [selectedDate, setSelectedDate] = useState('');
   const [selectedSeats, setSelectedSeats] = useState([]);
-  const [showModal, setShowModal] = useState(false); // State for showing the confirmation modal
-  // const [userDetails, setUserDetails] = useState(null); // State for user details
+  const [showModal, setShowModal] = useState(false); 
+  // const [userDetails, setUserDetails] = useState(null); 
   const bookedSeats = useSelector(state =>
     state.parks
     .filter(park => park.selectedDate === selectedDate)
@@ -24,7 +24,7 @@ export default function Outline() {
       }))
   );
 
-  // const dispatch = useDispatch();
+ 
 
   const handleDateChange = (e) => {
     setSelectedDate(e.target.value);
@@ -40,11 +40,11 @@ export default function Outline() {
   };
 
   const handleContinue = () => {
-    setShowModal(true); // Show the confirmation modal
+    setShowModal(true); 
   };
 
   const handleModalClose = () => {
-    setShowModal(false); // Close the modal
+    setShowModal(false); 
   };
 
   return (

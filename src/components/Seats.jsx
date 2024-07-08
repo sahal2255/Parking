@@ -55,14 +55,14 @@ export default function Seats({ seatNumber, isSelected, handleSeatSelection, isB
                 onClick={handleModalClose}
                 className="p-2 bg-gray-800 rounded text-white mr-2"
               >
-                Exit
+                Close
               </button>
               <button
                 type="button"
                 onClick={handleDelete}
                 className="p-2 bg-red-600 rounded text-white"
               >
-                Delete
+                Exit
               </button>
             </div>
           </div>
